@@ -1,7 +1,9 @@
 let fs = require('fs')
 let http = require('http')
 http.createServer((req, res) => {
-    res.writeHead(200,{'content-type':'text/html'})
-    console.log('Success!')
-    res.end('Booo!')
+    fs.readFile('index.html', (error,data) => {
+        res.writeHead(200,{'content-type':'text/html'})
+        res.write(data)
+        return res.end()
+    })
 }).listen(port=80)
