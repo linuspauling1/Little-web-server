@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="index.js" charset="UTF-8"></script>
     <title>Aplicație</title>
 </head>
 <body>
@@ -13,5 +12,11 @@
     <div id="element2">
         <!-- un text -->
     </div>
+    <script type="text/javascript">
+        var buton = document.getElementById('element1')
+        buton.addEventListener('click', evt => {
+            document.getElementById('element2').innerHTML = '<img src="dickpic.jpg">'
+        })
+    </script>
 </body>
 </html>
